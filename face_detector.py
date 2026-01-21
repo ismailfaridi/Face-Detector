@@ -1,9 +1,9 @@
 import cv2 as cv
 
 # Load Haar-Cascasde Models
-face_model = cv.CascadeClassifier("./OpenCV/haarcascade/haarcascade_frontalface_default.xml")
-eye_model = cv.CascadeClassifier("./OpenCV/haarcascade/haarcascade_eye.xml")
-smile_model = cv.CascadeClassifier("./OpenCV/haarcascade/haarcascade_smile.xml")
+face_model = cv.CascadeClassifier("./haarcascade/haarcascade_frontalface_default.xml")
+eye_model = cv.CascadeClassifier("./haarcascade/haarcascade_eye.xml")
+smile_model = cv.CascadeClassifier("./haarcascade/haarcascade_smile.xml")
 
 if face_model.empty() or eye_model.empty() or smile_model.empty():
     print("ERROR: Model is NOT loaded.")
@@ -49,4 +49,5 @@ while True:
         break
 
 cap.release()
+
 cv.destroyAllWindows()
